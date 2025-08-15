@@ -7,19 +7,19 @@ import Swal from 'sweetalert2';
 import withReactContent from 'sweetalert2-react-content';
 
 const SignUp = () => {
+    const navigate = useNavigate();
+    const MySwal = withReactContent(Swal);
 
     useEffect(() => {
         const user = localStorage.getItem('NGO');
         if(user){
             navigate('/donate');
         }
-    }, [])
+    }, [navigate])
     
     const [showPassword, setShowPassword] = useState(false);
     const [form, setForm] = useState({ email: localStorage.getItem('user')?localStorage.getItem('user'):'', password: '', confirmPassword: '' });
     const [errors, setErrors] = useState({ email: false, password: false, confirmPassword: false });
-    const navigate = useNavigate();
-    const MySwal = withReactContent(Swal);
 
     const handleInputChange = (event) => {
         setForm({ ...form, [event.target.name]: event.target.value });

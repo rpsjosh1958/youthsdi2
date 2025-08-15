@@ -27,17 +27,17 @@ export default function Footer() {
                             <a href="/contact">Contact Us</a>
                             <a href="/event">Popular Causes</a>
                             <a href="/event">Upcoming Events</a>
-                            <a href="#">Latest Blog</a>
+                            <button type="button" className="btn-link">Latest Blog</button>
                         </div>
                     </div>
                     <div className="col-lg-3 col-md-6">
                         <div className="footer-link">
                             <h2>Useful Links</h2>
-                            <a href="#">Terms of use</a>
-                            <a href="#">Privacy policy</a>
-                            <a href="#">Cookies</a>
-                            <a href="#">Help</a>
-                            <a href="#">FQAs</a>
+                            <button type="button" className="btn-link">Terms of use</button>
+                            <button type="button" className="btn-link">Privacy policy</button>
+                            <button type="button" className="btn-link">Cookies</button>
+                            <button type="button" className="btn-link">Help</button>
+                            <button type="button" className="btn-link">FQAs</button>
                         </div>
                     </div>
                     <div className="col-lg-3 col-md-6">
@@ -55,7 +55,7 @@ export default function Footer() {
             <div className="container copyright">
                 <div className="row">
                     <div className="col-md-6">
-                        <p>&copy; <a href="#">THE SANJIVANI NGO</a> | 2024, All Right Reserved.</p>
+                        <p>&copy; <span>THE SANJIVANI NGO</span> | 2024, All Right Reserved.</p>
                     </div>
                     <div className="col-md-6">
                         <p>Designed By <a href="https://www.linkedin.com/in/bhavesh-patil-92b7aa22a">TY_CS_C_52, VIT, Pune</a></p>

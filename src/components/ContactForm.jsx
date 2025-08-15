@@ -74,7 +74,7 @@ function ContactForm() {
                         <h2>Contact for any query</h2>
                     </div>
                     <div className="contact-img">
-                        <img src={contact} alt="Image" />
+                        <img src={contact} alt="Contact us" />
                     </div>
                     <div className="contact-form">
                         <div className='sent text-success' id="success"></div>
