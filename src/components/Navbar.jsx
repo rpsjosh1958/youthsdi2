@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom'
 import '../css/navbar.css';
-import logo from '../assets/YSDI NAVBAR LOGO.png';
 import logoWhite from '../assets/YSDI NAVBAR LOGO white.png';
 
 export default function Navbar() {
