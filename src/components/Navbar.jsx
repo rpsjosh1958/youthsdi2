@@ -1,10 +1,13 @@
 import { useEffect, useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom'
 import '../css/navbar.css';
+import logo from '../assets/YSDI NAVBAR LOGO.png';
+import logoWhite from '../assets/YSDI NAVBAR LOGO white.png';
 
 export default function Navbar() {
     const [dropdownOpen, setDropdownOpen] = useState(false);
     const [auth, setAuth] = useState("");
+    const [isSticky, setIsSticky] = useState(false);
     const path = useLocation().pathname;
     const navigate = useNavigate();
 
@@ -25,9 +28,11 @@ export default function Navbar() {
             if (window.scrollY > topBar.offsetHeight) {
                 navbar.classList.add('nav-sticky');
                 topBar.classList.add('hide-top-bar'); // Add class to hide top bar
+                setIsSticky(true);
             } else {
                 navbar.classList.remove('nav-sticky');
                 topBar.classList.remove('hide-top-bar'); // Remove class to show top bar
+                setIsSticky(false);
             }
         }
         window.addEventListener('scroll', toggleStickyNavbar);
@@ -47,11 +52,11 @@ export default function Navbar() {
                                 </div>
                                 <div className="text">
                                     <i className="fa fa-phone"></i>
-                                    <a href="tel:+91-7385223242"><p>+91-7385223242</p></a>
+                                    <a href="tel:+91-7385223242"><p>+233 50 057 4435</p></a>
                                 </div>
                                 <div className="text">
                                     <i className="fa fa-envelope"></i>
-                                    <a href="mailto:sanjivani.vitswd@vit.edu"><p>sanjivani.vitswd@vit.edu</p></a>
+                                    <a href="mailto:sanjivani.vitswd@vit.edu"><p>info@youthsdi.com</p></a>
                                 </div>
                             </div>
                         </div>
@@ -75,7 +80,9 @@ export default function Navbar() {
             {/* <!-- Nav Bar Start --> */}
             <div className="navbar navbar-expand-lg bg-dark navbar-dark">
                 <div className="container-fluid">
-                    <Link to="/" className="navbar-brand">SANJIVANI</Link>
+                    <Link to="/" className="navbar-brand">
+                        <img src={isSticky ? logoWhite : logoWhite} alt="YSDI" style={{ height: '60px' }} />
+                    </Link>
                     <button type="button" className="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                         <span className="navbar-toggler-icon"></span>
                     </button>
