@@ -61,19 +61,6 @@ export default function Home() {
             <Initiatives />
             <Funds />
             <ContactForm />
-            
-            {/* Contact Information as shown in YSDI images */}
-            <div className="contact-info-section">
-                <div className="container">
-                    <div className="contact-info-card">
-                        <div className="social-info">
-                            <span className="social-handle">@SD_Initiative17</span>
-                            <span className="contact-number">Contact us on: 0500574435</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
             <Footer />
             <BackToTop />
         </>
