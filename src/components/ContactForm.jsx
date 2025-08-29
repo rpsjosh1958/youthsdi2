@@ -46,10 +46,8 @@ function ContactForm() {
     const handleSubmit = (e) => {
         e.preventDefault();
         if (validateForm()) {
-            // Perform action (e.g., send form data to server)
             document.getElementById("success").innerHTML="✔ Message Sent Successfully!";
             console.log('Form submitted successfully');
-            // Reset form fields
             setFormData({
                 name: '',
                 email: '',
